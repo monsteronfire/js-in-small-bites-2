@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <form>
+    Hello, <span id="name">User</span>
+    <br/>
+    Enter name: <input type="text" id="user-name" value="Input your name"/>
+    <br/>
+    <input type="button" id="greet-button" value="Greet me" />
+  </form>
+
+  <script>
+    function performGreeting() {
+      document.getElementById('name').innerHTML = document.getElementById('user-name').value;
+    }
+
+    var greetButton = document.getElementById('greet-button');
+    greetButton.addEventListener('click', performGreeting);
+  </script>
+</body>
+</html>
