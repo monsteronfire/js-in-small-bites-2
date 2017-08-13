@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+  <script>
+    function WhatIsThis () {
+      return this;
+    };
+
+    function Something () {
+      var self = this;
+      self.whatisthis = WhatIsThis;
+      self.toString = function () {
+        return "[Something]"
+      };
+    };
+
+    var o = new Something();
+
+    document.writeln("o.whatisthis() = " + o.whatisthis());
+  </script>
+</body>
+</html>
