@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+  <script>
+    function SpaceShip(x, y, vx, vy) {
+      var self = this;
+      self.x = x;
+      self.y = y;
+      self.vx = vx;
+      self.vy = vy;
+    }
+
+    SpaceShip.prototype.speed = function () {
+      return Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+    };
+
+    var ship = new SpaceShip(10, 20, 3, 6);
+
+    document.writeln("ship[speed] = " + ship.speed());
+  </script>
+</body>
+</html>
