@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+  <script>
+    var ship = {
+      x: 10,
+      y: 20,
+      vx: 3,
+      vy: 6
+    };
+
+    ship.speed = Math.sqrt(ship.vx * ship.vx + ship.vy * ship.vy);
+    document.writeln("ship['speed'] =" + ship.speed );
+  </script>
+</body>
+</html>
