@@ -82,28 +82,52 @@
   };
 
   Calculator.prototype.add = function () {
-
+    console.log(this);
   };
 
-  var btnAdd = document.getElementById('button-+');
-  btnAdd.addEventListener('click', add);
-  var numBtns = document.querySelectorAll('input[type="button"]');
-  var calcOutput = document.querySelector('#calc-output');
+  Calculator.prototype.subtract = function () {
+    console.log(this);
+  };
 
-  numBtns.forEach(function (numbtn) {
-    numbtn.addEventListener('click', function () {
-      console.log(this.value);
-      calcOutput.innerHTML += this.value;
+  Calculator.prototype.multiply = function () {
+    console.log(this);
+  };
+
+  Calculator.prototype.divide = function () {
+    console.log(this);
+  };
+
+  Calculator.prototype.clear = function (trigger, target) {
+    trigger.addEventListener('click', function () {
+      target.innerHTML = 0;
     });
-  });
+  };
 
-  function sayName () {
+  Calculator.prototype.printNumber = function () {
     console.log(this.value);
   };
 
-  function add () {
-    console.log('add');
+  Calculator.prototype.init = function () {
+    var btnAdd = document.getElementById('button-+');
+    btnAdd.addEventListener('click', calculator.add);
+
+    var numBtns = document.querySelectorAll('input[type="button"]');
+    var calcOutput = document.querySelector('#calc-output');
+
+    numBtns.forEach(function (numbtn) {
+      numbtn.addEventListener('click', function () {
+        console.log(this.value);
+        calcOutput.innerHTML += this.value;
+      });
+    });
+
+    var btnCancel = document.getElementById('button-C');
+
   };
+
+  var calculator = new Calculator();
+  calculator.init();
+
 })();
     </script>
   </body>
