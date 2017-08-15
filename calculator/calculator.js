@@ -1,7 +1,11 @@
-(function () {
+(function (global) {
+  'use strict';
+
   var Calculator = function () {
-    return this;
+    return new Calculator.init();
   };
+
+  Calculator.prototype = {};
 
   var operators = ['+', '-', '*', '/'];
 
@@ -38,17 +42,11 @@
     });
   };
 
-  Calculator.prototype.init = function () {
-    var btnAdd = document.getElementById('button-+');
-    var btnSubtract = document.getElementById('button--');
-    var btnMultiply = document.getElementById('button-*');
-    var btnDivide = document.getElementById('button-/');
-    var btnCancel = document.getElementById('button-C');
-    var numBtns = document.querySelectorAll('input[type="button"]');
-    var calcOutput = document.querySelector('#calc-output');
+  Calculator.init = function () {
+
   };
 
-  var calculator = new Calculator();
-  calculator.init();
+  Calculator.init.prototype = Calculator.prototype;
 
-})();
+  global.Calculator = global.$C = Calculator;
+})(window);
