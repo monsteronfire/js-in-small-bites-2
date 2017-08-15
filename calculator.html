@@ -105,6 +105,10 @@
     });
   };
 
+  Calculator.prototype.equals = function () {
+    console.log(this);
+  };
+
   Calculator.prototype.printNumber = function (trigger, target) {
     console.log(this.value);
     trigger.addEventListener('click', function () {
