@@ -7,8 +7,13 @@ var btnDivide = document.getElementById('button-/');
 var btnCancel = document.getElementById('button-C');
 var btnEquals = document.getElementById('button-=');
 var calcOutput = document.querySelector('#calc-output');
-//var numBtns = document.querySelectorAll('input[type="button"]');
+var allBtns = document.querySelectorAll('input[type="button"]');
 var numBtns = [];
+var currentValue = calcOutput.value;
+
+calcOutput.addEventListener('change', function () {
+  console.log(calcOutput.value);
+});
 
 calculator.add(btnAdd, calcOutput);
 calculator.subtract(btnSubtract, calcOutput);

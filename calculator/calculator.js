@@ -11,42 +11,42 @@
 
   Calculator.prototype.add = function (selector, targetOutput) {
     selector.addEventListener('click', function () {
-      targetOutput.innerHTML = 'add';
+      targetOutput.value = 'add';
     });
     return this;
   };
 
   Calculator.prototype.subtract = function (selector, targetOutput) {
     selector.addEventListener('click', function () {
-      targetOutput.innerHTML = 'subtract';
+      targetOutput.value = 'subtract';
     });
     return this;
   };
 
   Calculator.prototype.multiply = function (selector, targetOutput) {
     selector.addEventListener('click', function () {
-      targetOutput.innerHTML = 'multiply';
+      targetOutput.value = 'multiply';
     });
     return this;
   };
 
   Calculator.prototype.divide = function (selector, targetOutput) {
     selector.addEventListener('click', function () {
-      targetOutput.innerHTML = 'divide';
+      targetOutput.value = 'divide';
     });
     return this;
   };
 
   Calculator.prototype.clear = function (selector, targetOutput) {
     selector.addEventListener('click', function () {
-      targetOutput.innerHTML = 0;
+      targetOutput.value = 0;
     });
     return this;
   };
 
   Calculator.prototype.equals = function (selector, targetOutput) {
     selector.addEventListener('click', function () {
-      targetOutput.innerHTML = 'equals';
+      targetOutput.value = 'equals';
     });
     return this;
   };
@@ -61,7 +61,7 @@
   Calculator.prototype.printNumber = function (arrNumberBtn, targetOutput) {
     arrNumberBtn.map(function (btnNum) {
       btnNum.addEventListener('click', function () {
-        targetOutput.innerHTML += this.value;
+        targetOutput.value += this.value;
       });
     });
     return this;
