@@ -51,6 +51,12 @@
     return this;
   };
 
+  Calculator.prototype.createNumberBtns = function (arrNumberBtn) {
+    for (var i = 0; i < 10; i++) {
+      arrNumberBtn.push(document.getElementById('button-' + i));
+    }
+  };
+
   Calculator.prototype.printNumber = function (selector, targetOutput) {
     console.log(this.value);
     selector.addEventListener('click', function () {
