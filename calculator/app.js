@@ -1,5 +1,7 @@
 var calculator = $C();
 
+var main = document.querySelector('#calculator-form');
+
 var btnAdd = document.getElementById('button-+');
 var btnSubtract = document.getElementById('button--');
 var btnMultiply = document.getElementById('button-*');
@@ -10,10 +12,6 @@ var calcOutput = document.querySelector('#calc-output');
 var allBtns = document.querySelectorAll('input[type="button"]');
 var numBtns = [];
 var currentValue = calcOutput.value;
-
-calcOutput.addEventListener('change', function () {
-  console.log(calcOutput.value);
-});
 
 calculator.add(btnAdd, calcOutput);
 calculator.subtract(btnSubtract, calcOutput);

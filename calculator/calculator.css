@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.output-wrapper {
+  margin-bottom: 10px;
+}
+
+.calc-output {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row input[type="button"] {
+  width: 22%;
+  margin-bottom: 5px;
+}
