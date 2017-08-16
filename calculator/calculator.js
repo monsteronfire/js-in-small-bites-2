@@ -51,16 +51,18 @@
     return this;
   };
 
-  Calculator.prototype.createNumberBtns = function (arrNumberBtn) {
+  Calculator.prototype.getNumberBtns = function (arrNumberBtn) {
     for (var i = 0; i < 10; i++) {
       arrNumberBtn.push(document.getElementById('button-' + i));
     }
+    return this;
   };
 
-  Calculator.prototype.printNumber = function (selector, targetOutput) {
-    console.log(this.value);
-    selector.addEventListener('click', function () {
-      selector.innerHTML += this.value;
+  Calculator.prototype.printNumber = function (arrNumberBtn, targetOutput) {
+    arrNumberBtn.map(function (btnNum) {
+      btnNum.addEventListener('click', function () {
+        targetOutput.innerHTML += this.value;
+      });
     });
     return this;
   };

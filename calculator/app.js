@@ -16,4 +16,4 @@ calculator.multiply(btnMultiply, calcOutput);
 calculator.divide(btnDivide, calcOutput);
 calculator.equals(btnEquals, calcOutput);
 calculator.clear(btnCancel, calcOutput);
-calculator.createNumberBtns(numBtns);
+calculator.getNumberBtns(numBtns).printNumber(numBtns, calcOutput);
