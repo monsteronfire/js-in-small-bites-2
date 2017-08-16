@@ -9,36 +9,46 @@
 
   var operators = ['+', '-', '*', '/'];
 
-  Calculator.prototype.add = function (target) {
-    console.log(this);
-  };
-
-  Calculator.prototype.subtract = function () {
-    console.log(this);
-  };
-
-  Calculator.prototype.multiply = function () {
-    console.log(this);
-  };
-
-  Calculator.prototype.divide = function () {
-    console.log(this);
-  };
-
-  Calculator.prototype.clear = function (trigger, target) {
-    trigger.addEventListener('click', function () {
-      target.innerHTML = 0;
+  Calculator.prototype.add = function (selector, targetOutput) {
+    selector.addEventListener('click', function () {
+      targetOutput.innerHTML = 'add';
     });
   };
 
-  Calculator.prototype.equals = function () {
-    console.log(this);
+  Calculator.prototype.subtract = function (selector, targetOutput) {
+    selector.addEventListener('click', function () {
+      targetOutput.innerHTML = 'subtract';
+    });
   };
 
-  Calculator.prototype.printNumber = function (trigger, target) {
+  Calculator.prototype.multiply = function (selector, targetOutput) {
+    selector.addEventListener('click', function () {
+      targetOutput.innerHTML = 'multiply';
+    });
+  };
+
+  Calculator.prototype.divide = function (selector, targetOutput) {
+    selector.addEventListener('click', function () {
+      targetOutput.innerHTML = 'divide';
+    });
+  };
+
+  Calculator.prototype.clear = function (selector, targetOutput) {
+    selector.addEventListener('click', function () {
+      targetOutput.innerHTML = 0;
+    });
+  };
+
+  Calculator.prototype.equals = function (selector, targetOutput) {
+    selector.addEventListener('click', function () {
+      targetOutput.innerHTML = 'equals';
+    });
+  };
+
+  Calculator.prototype.printNumber = function (selector, targetOutput) {
     console.log(this.value);
-    trigger.addEventListener('click', function () {
-      trigger.innerHTML += this.value;
+    selector.addEventListener('click', function () {
+      selector.innerHTML += this.value;
     });
   };
 
