@@ -20,3 +20,8 @@ calculator.divide(btnDivide, calcOutput);
 calculator.equals(btnEquals, calcOutput);
 calculator.clear(btnCancel, calcOutput);
 calculator.getNumberBtns(numBtns).printNumber(numBtns, calcOutput);
+
+calcOutput.addEventListener('change', function (event) {
+  calcOutput.value = event.target.value;
+  console.log(calcOutput.value);
+});
